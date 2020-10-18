@@ -1,0 +1,151 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+#root {
+    height: 100%;     /* it makes root div to appear AS IF IT WERE INSIDE animation-field div (in reality, they stand side by side) */
+    overflow: auto;
+}
+
+body {
+    height: 100vh;
+    margin: 0;
+    padding: 0;
+}
+
+.animation-field {
+    position: absolute;
+    top: 0;
+    background: linear-gradient(to right, #001e5799, #001e5799);
+    width: 100%;
+    height: 100vh;
+    z-index: -4;
+}
+
+.box-field {
+    position: absolute;
+    top:0;
+    left: 0;
+    z-index: -3;
+    width: 100%;
+    height: 100%;
+    overflow:hidden;
+}
+
+.box-field li {
+    position: absolute;
+    display: block;
+    list-style: none;
+    width: 25px;
+    height: 25px;
+    background: rgba(255, 255, 255, 0.2);
+    animation: animate 20s linear infinite;
+    bottom: -150px;
+}
+
+.box-field li:nth-child(1) {
+    left: 86%;
+    width: 80px;
+    height: 80px;
+    animation-delay: 0s;
+}
+
+.box-field li:nth-child(2) {
+    left: 70%;
+    width: 100px;
+    height: 100px;
+    animation-delay: 5.5s;
+}
+
+.box-field li:nth-child(3) {
+    left: 70%;
+    width: 100px;
+    height: 100px;
+    animation-delay: 5.5s;
+}
+
+.box-field li:nth-child(4) {
+    left: 70%;
+    width: 150px;
+    height: 150px;
+    animation-delay: 0s;
+    animation-duration: 15s;
+}
+
+.box-field li:nth-child(5) {
+    left: 65%;
+    width: 40px;
+    height: 40px;
+    animation-delay: 0s;
+}
+
+.box-field li:nth-child(6) {
+    left: 15%;
+    width: 110px;
+    height: 110px;
+    animation-delay: 3.5s;
+}
+
+@keyframes animate {
+    0% {
+        transform: translateY(0) rotate(0deg);
+        opacity: 1;
+    }
+    100% {
+        transform: translateY(-800px) rotate(360deg);
+        opacity: 0;
+    }
+}
+
+.btn1 {
+    background: none;
+    border: 1px solid #000;
+    font-family: 'Courier New', Courier, monospace;
+    text-transform: uppercase;
+    padding: 12px 20px;
+    min-width: 200px;
+    margin: 10px;
+    cursor: pointer;
+    transition: color 0.4s linear;
+    position: relative;
+}
+
+.btn1:hover {
+    color: #fff;
+}
+
+.btn1::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background: #000;
+    z-index: -1;
+    transition: transform 0.5s;
+    transform-origin: 0 0;
+    transition-timing-function: cubic-bezier(0.5, 1.6, 0.4, 0.7);
+    transform: scaleX(0);
+}
+
+.btn1:hover::before {
+    transform: scaleX(1);
+}
+
+.input-area input {
+    border-bottom: groove;
+    border-top: hidden;
+    border-left: hidden;
+    border-right: hidden;
+    padding: 7px;
+    margin: 4px;
+    border-radius: 10px;
+}
+
+.input-area input:hover {
+    border-bottom-color: #b7deed;
+    
+}

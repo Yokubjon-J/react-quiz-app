@@ -1,0 +1,34 @@
+.wrapper {
+    margin-bottom: 20px;
+    max-width: 45%;
+    background-image: linear-gradient(to top, #5ee7df 0%, #b490ca 100%);
+    border: red solid 1px;
+    border-radius: 5px;
+    padding: 5px;
+}
+
+.wrapperFalse {
+    margin-bottom: 20px;
+    max-width: 45%;
+    background-image: linear-gradient(to top, #dbdcd7 0%, #dddcd7 24%, #e2c9cc 30%, #e7627d 46%, #b8235a 59%, #801357 71%, #3d1635 84%, #1c1a27 100%);
+    border: red solid 1px;
+    border-radius: 5px;
+    padding: 5px;
+    
+}
+
+.wrapperTrue {
+    margin-bottom: 20px;
+    max-width: 45%;
+    background-image: linear-gradient(to top, #4fb576 0%, #44c489 30%, #28a9ae 46%, #28a2b7 59%, #4c7788 71%, #6c4f63 86%, #432c39 100%);
+    border: red solid 1px;
+    border-radius: 5px;
+    padding: 5px;
+}
+
+.results-page {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
